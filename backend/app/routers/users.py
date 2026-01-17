@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.deps.auth import require_clerk_auth
 from app.deps.db import get_db
-from app.db.models import User
+from app.db.models.user import User
 from app.schemas.user import UserCreate, UserOut
 
 router = APIRouter()
