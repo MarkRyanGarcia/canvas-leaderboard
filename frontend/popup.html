@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranked Canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header class="player-header">
+        <div class="player-info">
+          <div class="avatar-container">
+            <div class="avatar-frame">
+              <span class="avatar-emoji">🧙‍♂️</span>
+            </div>
+            <div class="level-badge">12</div>
+          </div>
+          <div class="player-details">
+            <h1 class="player-name">Alex Student</h1>
+            <div class="xp-bar-container">
+              <div class="xp-info">
+                <span class="rank-title">Scholar Mage</span>
+                <span class="xp-text">2,400 / 5,000 XP</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 48%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="streak-counter">
+          <span class="fire-icon">🔥</span>
+          <span class="streak-days">5</span>
+        </div>
+      </header>
+
+      <nav class="main-nav">
+        <button class="nav-btn active" data-tab="dashboard">Dashboard</button>
+        <button class="nav-btn" data-tab="leaderboard">Leaderboard</button>
+        <button class="nav-btn" data-tab="quests">Quests</button>
+      </nav>
+
+      <main class="content-area">
+        <div id="dashboard" class="tab-content active">
+          <div class="stats-row">
+            <div class="stat-card">
+              <span class="stat-label">Class Rank</span>
+              <span class="stat-value text-gold">#4</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Assignments</span>
+              <span class="stat-value text-blue">12</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Avg Grade</span>
+              <span class="stat-value text-green">94%</span>
+            </div>
+          </div>
+
+          <div class="section-title">Recent Activity</div>
+          <div class="activity-feed">
+            <div class="feed-item">
+              <div class="feed-icon bg-purple">📚</div>
+              <div class="feed-content">
+                <div class="feed-title">Completed: History Essay</div>
+                <div class="feed-time">2 hours ago</div>
+              </div>
+              <div class="feed-reward">+500 XP</div>
+            </div>
+            <div class="feed-item">
+              <div class="feed-icon bg-green">✅</div>
+              <div class="feed-content">
+                <div class="feed-title">Daily Login Bonus</div>
+                <div class="feed-time">5 hours ago</div>
+              </div>
+              <div class="feed-reward">+50 XP</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="leaderboard" class="tab-content">
+          <div class="leaderboard-list" id="leaderboardList"></div>
+        </div>
+
+        <div id="quests" class="tab-content">
+          <div class="quest-list" id="questList"></div>
+        </div>
+      </main>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

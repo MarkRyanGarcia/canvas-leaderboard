@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Alytout - Premium Extension Layout",
+  "version": "1.0",
+  "description": "A modern, premium Chrome extension layout starter.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "permissions": ["activeTab", "scripting"]
+}
