@@ -13,10 +13,10 @@ router = APIRouter()
 def get_user(
     user_id: str,
     db: Annotated[Session, Depends(get_db)],
-    auth_id: Annotated[str, Depends(require_clerk_auth)],
+    # auth_id: Annotated[str, Depends(require_clerk_auth)],
 ):
-    if auth_id != user_id:
-        raise HTTPException(status_code=401, detail="Unauthorized")
+    # if auth_id != user_id:
+    #     raise HTTPException(status_code=401, detail="Unauthorized")
 
     return db.query(User).filter(User.id == user_id).first()
 
@@ -25,10 +25,10 @@ def get_user(
 def create_user(
     user_in: UserCreate,
     db: Annotated[Session, Depends(get_db)],
-    auth_id: Annotated[str, Depends(require_clerk_auth)],
+    # auth_id: Annotated[str, Depends(require_clerk_auth)],
 ):
-    if auth_id != user_in.id:
-        raise HTTPException(status_code=401, detail="Unauthorized")
+    # if auth_id != user_in.id:
+    #     raise HTTPException(status_code=401, detail="Unauthorized")
 
     existing_user = db.query(User).filter((User.id == user_in.id)).first()
     if existing_user:
