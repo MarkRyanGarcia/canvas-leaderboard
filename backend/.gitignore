@@ -20,7 +20,7 @@ venv/
 alembic/versions/__pycache__/
 
 # Editor / OS
-.vscode/
+*.vscode/
 .idea/
 .DS_Store
 Thumbs.db
