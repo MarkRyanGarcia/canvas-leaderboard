@@ -1,0 +1,10 @@
+{
+    "manifest_version": 3,
+    "name": "Canvas Leaderboard",
+    "version": "1.0.0",
+    "description": "Game-ify your Canvas experience with a fun leaderboard!",
+    "action": {
+      "default_popup": "index.html"
+    },
+    "permissions": []
+  }
