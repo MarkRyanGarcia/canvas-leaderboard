@@ -9,6 +9,12 @@ from app.schemas.user import UserCreate, UserOut
 router = APIRouter()
 
 
+@router.get("", response_model=list[UserOut])
+def get_all_users(
+    db: Annotated[Session, Depends(get_db)],
+):
+    return db.query(User).all()
+
 @router.get("/{user_id}", response_model=UserOut | None)
 def get_user(
     user_id: str,
