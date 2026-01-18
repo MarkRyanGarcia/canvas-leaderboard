@@ -11,7 +11,7 @@ class Course(Base):
     __tablename__ = "courses"
 
     id: Mapped[str] = mapped_column(String, primary_key=True, nullable=False)
-    title: Mapped[str] = mapped_column(String, unique=True, nullable=False)
+    title: Mapped[str] = mapped_column(String, nullable=False)
 
     users: Mapped[list["User"]] = relationship(
         secondary="user_courses", back_populates="courses"
